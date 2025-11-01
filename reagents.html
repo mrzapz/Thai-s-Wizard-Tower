@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reagents — Thai's Wizard Tower</title>
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background: linear-gradient(180deg,#f8e7b8 0%, #f5ddb0 30%, #f1cf97 60%, #eacc7c 100%);
+      min-height: 100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    .parchment {
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,250,230,0.85));
+      border: 1px solid rgba(139, 92, 24, 0.25);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.6);
+      border-radius: 14px;
+      backdrop-filter: blur(2px);
+    }
+
+    :focus {
+      outline: 3px solid rgba(234, 179, 8, 0.25);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+  <div class="min-h-screen flex flex-col items-center py-10 px-6">
+
+    <!-- navbar -->
+    <header class="w-full max-w-5xl">
+      <nav class="flex items-center justify-between parchment px-6 py-4 relative">
+        <div class="flex items-center gap-4">
+          <div class="rounded-full w-12 h-12 flex items-center justify-center text-2xl font-extrabold text-yellow-900"
+               style="background: linear-gradient(180deg,#f7e2a1,#e9c46a); box-shadow: 0 4px 8px rgba(0,0,0,0.12);">
+            TW
+          </div>
+          <div>
+            <a href="index.html" class="text-xl md:text-2xl font-semibold text-yellow-900">Thai's Wizard Tower</a>
+            <p class="text-xs text-yellow-800/80">Affordable reagents & treasure cards</p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="index.html" class="px-3 py-2 rounded-md font-medium hover:scale-105 transform transition">Home</a>
+          <a href="treasure-cards.html" class="px-3 py-2 rounded-md font-medium hover:scale-105 transform transition">Treasure Cards</a>
+          <a href="about.html" class="px-3 py-2 rounded-md font-medium hover:scale-105 transform transition">About</a>
+        </div>
+
+        <div class="md:hidden">
+          <details class="relative">
+            <summary class="list-none cursor-pointer px-3 py-2 rounded-md font-medium">Menu ▾</summary>
+            <div class="absolute right-0 mt-2 w-44 parchment p-3 rounded-md shadow-md">
+              <a href="index.html" class="block py-2">Home</a>
+              <a href="treasure-cards.html" class="block py-2">Treasure Cards</a>
+              <a href="about.html" class="block py-2">About</a>
+            </div>
+          </details>
+        </div>
+      </nav>
+    </header>
+
+    <!-- content -->
+    <main class="w-full max-w-5xl mt-8 parchment p-8 relative">
+      <h1 class="text-3xl md:text-4xl font-bold text-yellow-900 mb-6 text-center">Reagents Shop</h1>
+      <p class="text-center text-yellow-900/85 max-w-2xl mx-auto">
+        Browse a selection of reagents available for trade and purchase.  
+        All prices are fair, and bulk discounts are available!
+      </p>
+
+      <!-- product grid -->
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Reagent card template -->
+        <div class="group parchment p-4 rounded-lg shadow-md border border-yellow-700/20 hover:shadow-xl hover:scale-[1.02] transition flex flex-col items-center">
+          <div class="w-[195px] h-[127px] bg-yellow-100 rounded-md flex items-center justify-center text-yellow-900/70 text-sm">
+            <span>Sandstone</span>
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-yellow-900 group-hover:text-yellow-800 transition">Sandstone</h3>
+        </div>
+
+        <div class="group parchment p-4 rounded-lg shadow-md border border-yellow-700/20 hover:shadow-xl hover:scale-[1.02] transition flex flex-col items-center">
+          <div class="w-[195px] h-[127px] bg-yellow-100 rounded-md flex items-center justify-center text-yellow-900/70 text-sm">
+            <span>Squid Ink</span>
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-yellow-900 group-hover:text-yellow-800 transition">Squid Ink</h3>
+        </div>
+
+        <div class="group parchment p-4 rounded-lg shadow-md border border-yellow-700/20 hover:shadow-xl hover:scale-[1.02] transition flex flex-col items-center">
+          <div class="w-[195px] h-[127px] bg-yellow-100 rounded-md flex items-center justify-center text-yellow-900/70 text-sm">
+            <span>Dream Water</span>
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-yellow-900 group-hover:text-yellow-800 transition">Dream Water</h3>
+        </div>
+
+        <div class="group parchment p-4 rounded-lg shadow-md border border-yellow-700/20 hover:shadow-xl hover:scale-[1.02] transition flex flex-col items-center">
+          <div class="w-[195px] h-[127px] bg-yellow-100 rounded-md flex items-center justify-center text-yellow-900/70 text-sm">
+            <span>Titanium</span>
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-yellow-900 group-hover:text-yellow-800 transition">Titanium</h3>
+        </div>
+
+        <div class="group parchment p-4 rounded-lg shadow-md border border-yellow-700/20 hover:shadow-xl hover:scale-[1.02] transition flex flex-col items-center">
+          <div class="w-[195px] h-[127px] bg-yellow-100 rounded-md flex items-center justify-center text-yellow-900/70 text-sm">
+            <span>Moon Dust</span>
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-yellow-900 group-hover:text-yellow-800 transition">Moon Dust</h3>
+        </div>
+
+        <div class="group parchment p-4 rounded-lg shadow-md border border-yellow-700/20 hover:shadow-xl hover:scale-[1.02] transition flex flex-col items-center">
+          <div class="w-[195px] h-[127px] bg-yellow-100 rounded-md flex items-center justify-center text-yellow-900/70 text-sm">
+            <span>Sunstone</span>
+          </div>
+          <h3 class="mt-3 text-lg font-semibold text-yellow-900 group-hover:text-yellow-800 transition">Sunstone</h3>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="w-full max-w-5xl mt-8 parchment p-4 text-center">
+      <p class="text-sm text-yellow-900/85">© 2025 Thai's Wizard Tower — All Rights Reserved</p>
+    </footer>
+  </div>
+</body>
+</html>
