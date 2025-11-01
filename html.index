@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thai's Wizard Tower — Welcome</title>
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* subtle parchment texture-ish feel (pure CSS fall-back) */
+    body {
+      /* gold parchment gradient */
+      background: linear-gradient(180deg,#f8e7b8 0%, #f5ddb0 30%, #f1cf97 60%, #eacc7c 100%);
+      min-height: 100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* content container mimicking a scroll/parchment */
+    .parchment {
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,250,230,0.85));
+      border: 1px solid rgba(139, 92, 24, 0.25);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.6);
+      border-radius: 14px;
+      backdrop-filter: blur(2px);
+    }
+
+    /* subtle parchment edge */
+    .parchment::before {
+      content: "";
+      position: absolute;
+      inset: -8px;
+      z-index: -1;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(153,101,21,0.06), rgba(153,101,21,0.12));
+      filter: blur(6px);
+    }
+
+    /* focus-visible outlines for keyboard users */
+    :focus {
+      outline: 3px solid rgba(234, 179, 8, 0.25);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+
+  <!-- page wrapper -->
+  <div class="min-h-screen flex flex-col items-center py-10 px-6">
+
+    <!-- header / navbar -->
+    <header class="w-full max-w-5xl">
+      <nav class="flex items-center justify-between parchment relative px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="rounded-full w-12 h-12 flex items-center justify-center text-2xl font-extrabold text-yellow-900"
+               style="background: linear-gradient(180deg,#f7e2a1,#e9c46a); box-shadow: 0 4px 8px rgba(0,0,0,0.12);">
+            TW
+          </div>
+          <div>
+            <a href="index.html" class="text-xl md:text-2xl font-semibold text-yellow-900">Thai's Wizard Tower</a>
+            <p class="text-xs text-yellow-800/80">Affordable reagents & treasure cards</p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="reagents.html" class="px-3 py-2 rounded-md font-medium hover:scale-105 transform transition">Reagents</a>
+          <a href="treasure-cards.html" class="px-3 py-2 rounded-md font-medium hover:scale-105 transform transition">Treasure Cards</a>
+          <a href="about.html" class="px-3 py-2 rounded-md font-medium hover:scale-105 transform transition">About</a>
+        </div>
+
+        <!-- mobile menu button (simple) -->
+        <div class="md:hidden">
+          <details class="relative">
+            <summary class="list-none cursor-pointer px-3 py-2 rounded-md font-medium">Menu ▾</summary>
+            <div class="absolute right-0 mt-2 w-44 parchment p-3 rounded-md shadow-md">
+              <a href="reagents.html" class="block py-2">Reagents</a>
+              <a href="treasure-cards.html" class="block py-2">Treasure Cards</a>
+              <a href="about.html" class="block py-2">About</a>
+            </div>
+          </details>
+        </div>
+      </nav>
+    </header>
+
+    <!-- welcome container -->
+    <main class="w-full max-w-5xl mt-8 parchment relative p-8">
+      <section class="text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-900 drop-shadow-sm">Welcome to Thai's Wizard Tower</h1>
+        <p class="mt-3 max-w-2xl mx-auto text-yellow-900/85">
+          Your trusted source for affordable reagents and treasure cards. Friendly service, great prices, and a 7-year reputation
+          across the GTP Discord community.
+        </p>
+      </section>
+
+      <section class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Shop Reagents Card -->
+        <a href="reagents.html" class="group block transform transition hover:scale-[1.02]">
+          <div class="rounded-lg overflow-hidden border border-yellow-700/20 shadow-md hover:shadow-xl transition parchment p-6 flex flex-col items-center">
+            <div class="w-[195px] h-[127px] bg-yellow-100 rounded-md flex items-center justify-center text-sm text-yellow-900/70">
+              <!-- placeholder thumbnail area -->
+              <span>Reagent Preview</span>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-yellow-900 group-hover:text-yellow-800 transition">Shop Reagents</h3>
+            <p class="mt-2 text-sm text-yellow-800/80">Stock up on reagents at affordable prices — bulk discounts available.</p>
+            <div class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md font-medium bg-yellow-100/80 hover:bg-yellow-100 transition">
+              Enter Shop ▸
+            </div>
+          </div>
+        </a>
+
+        <!-- Shop Treasure Cards Card -->
+        <a href="treasure-cards.html" class="group block transform transition hover:scale-[1.02]">
+          <div class="rounded-lg overflow-hidden border border-yellow-700/20 shadow-md hover:shadow-xl transition parchment p-6 flex flex-col items-center">
+            <div class="w-[195px] h-[127px] bg-yellow-100 rounded-md flex items-center justify-center text-sm text-yellow-900/70">
+              <span>Treasure Card Preview</span>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-yellow-900 group-hover:text-yellow-800 transition">Shop Treasure Cards</h3>
+            <p class="mt-2 text-sm text-yellow-800/80">Find rare and common treasure cards — perfect for collectors and traders.</p>
+            <div class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md font-medium bg-yellow-100/80 hover:bg-yellow-100 transition">
+              Explore Cards ▸
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <!-- small info / trust badge -->
+      <section class="mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="rounded-full w-12 h-12 flex items-center justify-center text-lg font-semibold text-yellow-900"
+               style="background: linear-gradient(180deg,#fff6df,#f7e3b0); box-shadow: 0 4px 8px rgba(0,0,0,0.08);">
+            ⭐
+          </div>
+          <div>
+            <p class="font-semibold text-yellow-900">Trusted — 7 years trading on GTP Discord</p>
+            <p class="text-sm text-yellow-800/80">500+ completed orders • 300+ customer reviews</p>
+          </div>
+        </div>
+
+        <div class="text-sm text-yellow-900/80">
+          Tip: Upload your images to <code>/images/</code> (e.g. <code>/images/Plant All.png</code>) and reference them in the product pages.
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="w-full max-w-5xl mt-8 parchment relative p-4 text-center">
+      <p class="text-sm text-yellow-900/85">© 2025 Thai's Wizard Tower — All Rights Reserved</p>
+      <p class="text-xs text-yellow-900/70 mt-1">Built with ❤️ — Drop the site files into a GitHub Pages repository to publish.</p>
+    </footer>
+  </div>
+</body>
+</html>
